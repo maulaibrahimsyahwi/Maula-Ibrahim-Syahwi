@@ -2,17 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react({
-      // Experimental: handle JSX MIME types
-      babel: {
-        plugins: [],
-      },
-    }),
-    tailwindcss(),
-  ],
-  define: {
-    "process.env": {},
-  },
+  plugins: [react(), tailwindcss()],
+  base: "/Portofolio-Maula-Ibrahim-Syahwi/",
 });
