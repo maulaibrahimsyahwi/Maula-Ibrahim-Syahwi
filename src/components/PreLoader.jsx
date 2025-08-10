@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
 
-const PreLoader = () => {
+const PreLoader = ({ children }) => {
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 900);
   }, []);
 
-  return (
-    loading && (
+  // Jika masih loading, tampilkan loader
+  if (loading) {
+    return (
       <div className="w-screen h-screen fixed flex items-center justify-center bg-black z-50">
         <div role="status">
           <svg
@@ -31,8 +33,11 @@ const PreLoader = () => {
           <span className="sr-only">Loading...</span>
         </div>
       </div>
-    )
-  );
+    );
+  }
+
+  // Jika sudah selesai loading, tampilkan children
+  return children;
 };
 
 export default PreLoader;

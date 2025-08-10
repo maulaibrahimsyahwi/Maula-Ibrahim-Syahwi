@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 150) {
@@ -20,8 +21,8 @@ const Navbar = () => {
   return (
     <div className="navbar py-7 flex items-center justify-between">
       <div className="logo">
-        <h1 className="text-3xl font-bold bg-white text-black p-1 md:bg-transparent md:text-white">
-          Portofolio
+        <h1 className="text-3xl font-bold bg-white text-black p-1 md:bg-transparent md:text-white hover:text-violet-300 transition-colors duration-300 cursor-pointer">
+          Portfolio
         </h1>
       </div>
       <ul
@@ -30,22 +31,34 @@ const Navbar = () => {
         }`}
       >
         <li>
-          <a href="#beranda" className="sm:text-lg text-base font-medium">
+          <a
+            href="#beranda"
+            className="sm:text-lg text-base font-medium hover:text-violet-400 hover:scale-105 transition-all duration-300 ease-in-out relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-violet-400 after:transition-all after:duration-300 hover:after:w-full"
+          >
             Beranda
           </a>
         </li>
         <li>
-          <a href="#tentang" className="sm:text-lg text-base font-medium">
-            Tentang
+          <a
+            href="#about"
+            className="sm:text-lg text-base font-medium hover:text-violet-300 hover:scale-105 transition-all duration-300 ease-in-out relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-violet-300 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            About
           </a>
         </li>
         <li>
-          <a href="#proyek" className="sm:text-lg text-base font-medium">
-            Proyek
+          <a
+            href="#project"
+            className="sm:text-lg text-base font-medium hover:text-violet-300 hover:scale-105 transition-all duration-300 ease-in-out relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-violet-300 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Project
           </a>
         </li>
         <li>
-          <a href="#kontak" className="sm:text-lg text-base font-medium">
+          <a
+            href="#kontak"
+            className="sm:text-lg text-base font-medium hover:text-violet-300 hover:scale-105 transition-all duration-300 ease-in-out relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-violet-300 after:transition-all after:duration-300 hover:after:w-full"
+          >
             Contact
           </a>
         </li>
@@ -53,4 +66,5 @@ const Navbar = () => {
     </div>
   );
 };
+
 export default Navbar;

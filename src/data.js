@@ -1,11 +1,14 @@
+// {
+//   // Status yang tersedia:
+// - "active": Link berfungsi normal, akan muncul tombol "Lihat" berwarna violet
+// - "expired": Link sudah kadaluarsa, tombol merah dengan text "Link Expired"
+// - "maintenance": Sedang maintenance, tombol kuning dengan text "Under Maintenance"
+// - "inactive": Project tidak aktif, tombol abu-abu dengan text "Not Available"
+// - "coming_soon": Project belum selesai, tombol abu-abu dengan text "Coming Soon"
+// }
+
+// Import semua gambar
 import HeroImage from "/assets/Foto Formall.jpg";
-
-const Image = {
-  HeroImage,
-};
-
-export default Image;
-
 import Tools1 from "/assets/tools/vscode.png";
 import Tools2 from "/assets/tools/reactjs.png";
 import Tools3 from "/assets/tools/nextjs.png";
@@ -17,7 +20,19 @@ import Tools8 from "/assets/tools/github.png";
 import Tools9 from "/assets/tools/ai.png";
 import Tools10 from "/assets/tools/canva.png";
 import Tools11 from "/assets/tools/figma.png";
+// Import semua Project
+import Project1 from "/assets/proyek/proyek1.webp";
+import Project2 from "/assets/proyek/proyek2.webp";
+import Project3 from "/assets/proyek/proyek3.webp";
+import Project4 from "/assets/proyek/proyek4.webp";
 
+// Data Image
+const DataImage = {
+  HeroImage,
+};
+export default DataImage;
+
+// Data Tools
 export const listTools = [
   {
     id: 1,
@@ -26,20 +41,8 @@ export const listTools = [
     ket: "Code Editor",
     dad: "100",
   },
-  {
-    id: 2,
-    gambar: Tools2,
-    nama: "React JS",
-    ket: "Framework",
-    dad: "200",
-  },
-  {
-    id: 3,
-    gambar: Tools3,
-    nama: "Next JS",
-    ket: "Framework",
-    dad: "300",
-  },
+  { id: 2, gambar: Tools2, nama: "React JS", ket: "Framework", dad: "200" },
+  { id: 3, gambar: Tools3, nama: "Next JS", ket: "Framework", dad: "300" },
   {
     id: 4,
     gambar: Tools4,
@@ -47,20 +50,8 @@ export const listTools = [
     ket: "Framework",
     dad: "400",
   },
-  {
-    id: 5,
-    gambar: Tools5,
-    nama: "Bootstrap",
-    ket: "Framework",
-    dad: "500",
-  },
-  {
-    id: 6,
-    gambar: Tools6,
-    nama: "Javascript",
-    ket: "Language",
-    dad: "600",
-  },
+  { id: 5, gambar: Tools5, nama: "Bootstrap", ket: "Framework", dad: "500" },
+  { id: 6, gambar: Tools6, nama: "Javascript", ket: "Language", dad: "600" },
   {
     id: 7,
     gambar: Tools7,
@@ -68,13 +59,7 @@ export const listTools = [
     ket: "Javascript Runtime",
     dad: "700",
   },
-  {
-    id: 8,
-    gambar: Tools8,
-    nama: "Github",
-    ket: "Repository",
-    dad: "800",
-  },
+  { id: 8, gambar: Tools8, nama: "Github", ket: "Repository", dad: "800" },
   {
     id: 9,
     gambar: Tools9,
@@ -82,76 +67,50 @@ export const listTools = [
     ket: "Design App",
     dad: "900",
   },
-  {
-    id: 10,
-    gambar: Tools10,
-    nama: "Canva",
-    ket: "Design App",
-    dad: "1000",
-  },
-  {
-    id: 11,
-    gambar: Tools11,
-    nama: "Figma",
-    ket: "Design App",
-    dad: "1100",
-  },
+  { id: 10, gambar: Tools10, nama: "Canva", ket: "Design App", dad: "1000" },
+  { id: 11, gambar: Tools11, nama: "Figma", ket: "Design App", dad: "1100" },
 ];
 
-import Proyek1 from "/assets/proyek/proyek1.webp";
-import Proyek2 from "/assets/proyek/proyek2.webp";
-import Proyek3 from "/assets/proyek/proyek3.webp";
-import Proyek4 from "/assets/proyek/proyek4.webp";
-import Proyek5 from "/assets/proyek/proyek5.webp";
-import Proyek6 from "/assets/proyek/proyek6.webp";
-
-export const listProyek = [
+// Data Proyek
+export const listProject = [
   {
     id: 1,
-    gambar: Proyek1,
-    nama: "Website Sekolah",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "AOS"],
+    gambar: Project1,
+    nama: "Website Course Online",
+    desk: "The Skillspan website is an online course platform made using CSS Vanilla and Javascript Vanilla, with a simple and interactive appearance.",
+    tools: ["HTML", "CSS", "Javascript"],
     dad: "200",
+    link: "https://task-manager-demo.netlify.app",
+    status: "active",
   },
   {
     id: 2,
-    gambar: Proyek2,
-    nama: "Company Profile",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "AOS", "Swiper", "Lightbox Gallery"],
+    gambar: Project2,
+    nama: "Prototype UI/UX",
+    desk: "Canteen UNJ Prototype for Mobile Dwaves for the UNJ Canteen Application to order food via a cellphone with a simple appearance.",
+    tools: ["Figma", "Canva"],
     dad: "300",
+    link: "https://www.figma.com/proto/kVJ1ZDlueY4bfOOuP4dIMu/IMK-Mobile-Application-UNJ-Canteen-by-Kelompok-7?node-id=8-3&t=akhdX51BMCcjCdNK-1",
+    status: "active",
   },
   {
     id: 3,
-    gambar: Proyek3,
-    nama: "Web Pernikahan 2.0",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "ReactJS", "TailwindCSS", "AOS"],
+    gambar: Project3,
+    nama: "Simple Pokémon Website",
+    desk: `Simple website based on React that displays Pokémon data from local JSON files, requires a "skilvul"/"admin" login, and using CSS.`,
+    tools: ["Vite", "ReactJS", "CSS"],
     dad: "400",
+    link: "https://task-manager-demo.netlify.app",
+    status: "inactive",
   },
   {
     id: 4,
-    gambar: Proyek4,
-    nama: "Website Course",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "ReactJS", "Bootstrap", "AOS"],
+    gambar: Project4,
+    nama: "Simple Portfolio",
+    desk: "This portfolio website is made purely using Tailwind CSS, displays profiles, projects, and contacts with responsive design and modern styles without additional framework.",
+    tools: ["HTML", "CSS", "Javascript", "Tailwind"],
     dad: "500",
-  },
-  {
-    id: 5,
-    gambar: Proyek5,
-    nama: "Web Portfolio",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "Bootsrap"],
-    dad: "600",
-  },
-  {
-    id: 6,
-    gambar: Proyek6,
-    nama: "Company Profile 2.0",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["NextJS", "TailwindCSS", "Framermotion"],
-    dad: "700",
+    link: "https://task-manager-demo.netlify.app",
+    status: "maintenance",
   },
 ];
