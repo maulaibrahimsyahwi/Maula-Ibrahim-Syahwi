@@ -81,7 +81,7 @@ export const listProject = [
     tools: ["HTML", "CSS", "Javascript"],
     dad: "200",
     link: "https://task-manager-demo.netlify.app",
-    status: "active",
+    status: "maintenance",
   },
   {
     id: 2,
@@ -101,7 +101,7 @@ export const listProject = [
     tools: ["Vite", "ReactJS", "CSS"],
     dad: "400",
     link: "https://task-manager-demo.netlify.app",
-    status: "inactive",
+    status: "maintenance",
   },
   {
     id: 4,
