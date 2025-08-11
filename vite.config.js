@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/Portofolio-Maula-Ibrahim-Syahwi/",
+  base: "/Maula-Ibrahim-Syahwi/",
   build: {
     rollupOptions: {
       output: {

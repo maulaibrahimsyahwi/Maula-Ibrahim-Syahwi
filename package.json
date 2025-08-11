@@ -1,5 +1,5 @@
 {
-  "homepage": "https://maulaibrahimsyahwi.github.io/Portofolio-Maula-Ibrahim-Syahwi",
+  "homepage": "https://maulaibrahimsyahwi.github.io/Maula-Ibrahim-Syahwi",
   "name": "web-portofolio",
   "private": true,
   "version": "0.0.0",
@@ -8,7 +8,7 @@
     "dev": "vite",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "build": "vite build --base=/Portofolio-Maula-Ibrahim-Syahwi/",
+    "build": "vite build --base=/Maula-Ibrahim-Syahwi/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
