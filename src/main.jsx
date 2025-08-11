@@ -14,11 +14,11 @@ AOS.init();
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <PreLoader basename={import.meta.env.BASE_URL}>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 mb-10">
         <Navbar />
         <App />
-        <Footer />
       </div>
+      <Footer />
     </PreLoader>
   </StrictMode>
 );
