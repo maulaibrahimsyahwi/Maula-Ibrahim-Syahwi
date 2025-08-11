@@ -139,7 +139,7 @@ function App() {
           <p className="text-base/loose mb-6 opacity-50">
             I have an interest in the field of programming and designer,
             especially in making websites and UI/UX designs, my interest in this
-            field has been going on for more than 3 years.
+            field has been going on for more than 2 years.
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
             <a
