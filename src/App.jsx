@@ -302,12 +302,16 @@ function App() {
                 data-aos-delay={project.dad}
                 data-aos-once="true"
               >
-                <img
-                  src={project.gambar}
-                  alt="project Image"
-                  className="w-full h-48 object-cover rounded-md mb-4"
-                  loading="lazy"
-                />
+                {/* Fixed image section - menggunakan object-contain untuk mencegah crop */}
+                <div className="w-full aspect-video bg-zinc-700 rounded-md mb-4 overflow-hidden">
+                  <img
+                    src={project.gambar}
+                    alt="project Image"
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+
                 <div className="project-card-info">
                   <h1 className="font-bold text-2xl my-4">{project.nama}</h1>
                   <p className="opacity-50 text-base/loose mb-4">
