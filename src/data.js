@@ -100,8 +100,8 @@ export const listProject = [
     desk: `Simple website based on React that displays Pokémon data from local JSON files, requires a "skilvul"/"admin" login, and using CSS.`,
     tools: ["Vite", "ReactJS", "CSS"],
     dad: "400",
-    link: "https://task-manager-demo.netlify.app",
-    status: "maintenance",
+    link: "https://simple-pokemon-theta.vercel.app/",
+    status: "active",
   },
   {
     id: 4,
