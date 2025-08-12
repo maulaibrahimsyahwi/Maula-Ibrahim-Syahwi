@@ -5,13 +5,4 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: "/Maula-Ibrahim-Syahwi/",
-  build: {
-    rollupOptions: {
-      output: {
-        entryFileNames: "[name].[hash].js",
-        chunkFileNames: "[name].[hash].js",
-        assetFileNames: "[name].[hash][extname]",
-      },
-    },
-  },
 });
