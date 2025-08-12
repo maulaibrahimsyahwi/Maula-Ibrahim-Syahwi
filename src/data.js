@@ -25,7 +25,7 @@ import Project1 from "/assets/proyek/proyek1.webp";
 import Project2 from "/assets/proyek/proyek2.webp";
 import Project3 from "/assets/proyek/proyek3.webp";
 import Project4 from "/assets/proyek/proyek4.webp";
-
+import Project5 from "/assets/proyek/proyek5.webp";
 // Data Image
 const DataImage = {
   HeroImage,
@@ -106,10 +106,20 @@ export const listProject = [
   {
     id: 4,
     gambar: Project4,
+    nama: "Responsive Movie Database",
+    desk: "The film database application was built with react using API. Find movies, make a list of watches, and film ranking.",
+    tools: ["HTML", "TailwindCSS", "Javascript", "React", "API", "Vite"],
+    dad: "500",
+    link: "https://movie-finder-watchlist-manager.vercel.app/",
+    status: "active",
+  },
+  {
+    id: 5,
+    gambar: Project5,
     nama: "Website Course Online",
     desk: "The Skillspan website is an online course platform made using CSS Vanilla and Javascript Vanilla, with a simple and interactive appearance.",
     tools: ["HTML", "CSS", "Javascript"],
-    dad: "500",
+    dad: "600",
     link: "https://task-manager-demo.netlify.app",
     status: "maintenance",
   },
