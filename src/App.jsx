@@ -211,13 +211,13 @@ function App() {
                 <h1 className="text-4xl mb-1">
                   15 <span className="text-violet-500">+</span>
                 </h1>
-                <p>project Selesai</p>
+                <p>Project is complete</p>
               </div>
               <div className="">
                 <h1 className="text-4xl mb-1">
                   2 <span className="text-violet-500">+</span>
                 </h1>
-                <p>tahun pengalaman</p>
+                <p>Year of Experience</p>
               </div>
             </div>
           </div>
