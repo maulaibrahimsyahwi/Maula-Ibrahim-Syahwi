@@ -7,6 +7,7 @@ import { GoHomeFill } from "react-icons/go";
 import { BsFolderFill } from "react-icons/bs";
 import { MdAccountCircle } from "react-icons/md";
 import { VscSettingsGear } from "react-icons/vsc";
+import { BiSolidMessageSquareDetail } from "react-icons/bi";
 
 function App() {
   const [showDock, setShowDock] = useState(false);
@@ -64,6 +65,14 @@ function App() {
       label: "tools",
       onClick: () => {
         const element = document.getElementById("tools");
+        element?.scrollIntoView({ behavior: "smooth" });
+      },
+    },
+    {
+      icon: <BiSolidMessageSquareDetail size={24} />,
+      label: "message",
+      onClick: () => {
+        const element = document.getElementById("kontak");
         element?.scrollIntoView({ behavior: "smooth" });
       },
     },
@@ -364,7 +373,7 @@ function App() {
         </div>
       </div>
 
-      <Contact />
+      <Contact id="kontak" />
     </>
   );
 }
