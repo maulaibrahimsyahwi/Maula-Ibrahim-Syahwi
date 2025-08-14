@@ -26,6 +26,7 @@ import Project2 from "/assets/proyek/proyek2.webp";
 import Project3 from "/assets/proyek/proyek3.webp";
 import Project4 from "/assets/proyek/proyek4.webp";
 import Project5 from "/assets/proyek/proyek5.webp";
+import Project6 from "/assets/proyek/proyek6.webp";
 // Data Image
 const DataImage = {
   HeroImage,
@@ -76,16 +77,36 @@ export const listProject = [
   {
     id: 1,
     gambar: Project1,
-    nama: "Simple Portfolio",
-    desk: "This portfolio website is made purely using Tailwind CSS, displays profiles, projects, and contacts with responsive design and modern styles without additional framework.",
-    tools: ["HTML", "CSS", "Javascript", "Tailwind"],
+    nama: "AI Chat Interface",
+    desk: "Modern AI Chat Application Based on React & Tailwind, Integrated GroQ AI (Llama 4). Features: Chat Real-Time, Conversation History, Context Memory, Responsive Design, and Modern UI/UX.",
+    tools: [
+      "Javascript",
+      "Tailwind",
+      "React",
+      "Groq AI",
+      "Vite",
+      "AI",
+      "Llama 4",
+      "React-Markdown",
+      "Lucide React",
+    ],
     dad: "200",
-    link: "https://maulaibrahimsyahwi.github.io/Web-Portofolio-TailwindCSS/",
+    link: "https://llama-chat-ai.vercel.app/",
     status: "active",
   },
   {
     id: 2,
     gambar: Project2,
+    nama: "Responsive Movie Database",
+    desk: "The film database application was built with react using API. Find movies, make a list of watches, and film ranking.",
+    tools: ["HTML", "TailwindCSS", "Javascript", "React", "API", "Vite"],
+    dad: "400",
+    link: "https://movie-finder-watchlist-manager.vercel.app/",
+    status: "active",
+  },
+  {
+    id: 3,
+    gambar: Project3,
     nama: "Prototype UI/UX",
     desk: "Canteen UNJ Prototype for Mobile Dwaves for the UNJ Canteen Application to order food via a cellphone with a simple appearance.",
     tools: ["Figma", "Canva"],
@@ -93,26 +114,18 @@ export const listProject = [
     link: "https://www.figma.com/proto/kVJ1ZDlueY4bfOOuP4dIMu/IMK-Mobile-Application-UNJ-Canteen-by-Kelompok-7?node-id=8-3&t=akhdX51BMCcjCdNK-1",
     status: "active",
   },
-  {
-    id: 3,
-    gambar: Project3,
-    nama: "Simple Pokémon Website",
-    desk: `Simple website based on React that displays Pokémon data from local JSON files, requires a "skilvul"/"admin" login, and using CSS.`,
-    tools: ["Vite", "ReactJS", "CSS"],
-    dad: "400",
-    link: "https://simple-pokemon-theta.vercel.app/",
-    status: "active",
-  },
+
   {
     id: 4,
     gambar: Project4,
-    nama: "Responsive Movie Database",
-    desk: "The film database application was built with react using API. Find movies, make a list of watches, and film ranking.",
-    tools: ["HTML", "TailwindCSS", "Javascript", "React", "API", "Vite"],
+    nama: "Simple Pokémon Website",
+    desk: `Simple website based on React that displays Pokémon data from local JSON files, requires a "skilvul"/"admin" login, and using CSS.`,
+    tools: ["Vite", "ReactJS", "CSS"],
     dad: "500",
-    link: "https://movie-finder-watchlist-manager.vercel.app/",
+    link: "https://simple-pokemon-theta.vercel.app/",
     status: "active",
   },
+
   {
     id: 5,
     gambar: Project5,
@@ -122,5 +135,15 @@ export const listProject = [
     dad: "600",
     link: "https://task-manager-demo.netlify.app",
     status: "maintenance",
+  },
+  {
+    id: 6,
+    gambar: Project6,
+    nama: "Simple Portfolio",
+    desk: "This portfolio website is made purely using Tailwind CSS, displays profiles, projects, and contacts with responsive design and modern styles without additional framework.",
+    tools: ["HTML", "CSS", "Javascript", "Tailwind"],
+    dad: "700",
+    link: "https://maulaibrahimsyahwi.github.io/Web-Portofolio-TailwindCSS/",
+    status: "active",
   },
 ];
