@@ -87,7 +87,6 @@ export const listProject = [
       "Vite",
       "AI",
       "Llama 4",
-      "React-Markdown",
       "Lucide React",
     ],
     dad: "200",

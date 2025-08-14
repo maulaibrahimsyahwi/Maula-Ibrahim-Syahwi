@@ -304,15 +304,15 @@ function App() {
 
             return (
               <div
-                className="project-card p-4 bg-zinc-800 rounded-md hover:bg-zinc-700 transition-colors duration-200"
+                className="project-card p-4 bg-zinc-800 rounded-md hover:bg-zinc-700 transition-colors duration-200 flex flex-col h-full"
                 key={project.id}
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay={project.dad}
                 data-aos-once="true"
               >
-                {/* Fixed image section - menggunakan object-contain untuk mencegah crop */}
-                <div className="w-full aspect-video bg-zinc-700 rounded-md mb-4 overflow-hidden">
+                {/* Fixed image section */}
+                <div className="w-full aspect-video bg-zinc-700 rounded-md mb-4 overflow-hidden flex-shrink-0">
                   <img
                     src={project.gambar}
                     alt="project Image"
@@ -321,24 +321,31 @@ function App() {
                   />
                 </div>
 
-                <div className="project-card-info">
-                  <h1 className="font-bold text-2xl my-4">{project.nama}</h1>
-                  <p className="opacity-50 text-base/loose mb-4">
+                {/* Content section yang akan mengambil sisa ruang */}
+                <div className="project-card-info flex flex-col flex-grow">
+                  <h1 className="font-bold text-2xl my-4 flex-shrink-0">
+                    {project.nama}
+                  </h1>
+
+                  {/* Description dengan flex-grow untuk mengambil sisa ruang */}
+                  <p className="opacity-50 text-base/loose mb-4 ">
                     {project.desk}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
+
+                  {/* Tools section yang akan selalu sejajar di bawah */}
+                  <div className="flex flex-wrap gap-2 mb-4 flex-shrink-0 mt-auto">
                     {project.tools.map((tool, index) => (
                       <p
                         key={index}
-                        className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold text-sm"
+                        className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold text-sm h-fit"
                       >
                         {tool}
                       </p>
                     ))}
                   </div>
 
-                  {/* Button dengan handling status */}
-                  <div className="mt-8 text-center">
+                  {/* Button section yang akan selalu di bawah */}
+                  <div className="text-center flex-shrink-0">
                     <div className="relative group">
                       {buttonConfig.clickable ? (
                         <a
