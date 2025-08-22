@@ -162,26 +162,30 @@ export const listProject = [
 ];
 
 // data music
+// data music
 export const listMusic = [
   {
     id: 1,
     title: "Too Late",
     artist: "Moavii",
-    cover: ImageMusic1, // URL cover album
-    audio: "../public/assets/music/TooLate-Moavii.mp3", // Pastikan path ini benar
+    cover: ImageMusic1,
+    audio:
+      "https://drive.google.com/uc?export=download&id=1NnsAKfafluR4RbNBpXjBCm1DBUkcmE4I",
   },
   {
     id: 2,
     title: "Cloud",
     artist: "Lukrembo",
     cover: ImageMusic2,
-    audio: "../public/assets/music/Cloud.mp3",
+    audio:
+      "https://drive.google.com/uc?export=download&id=1ORb6xo5TdHZa77eXkjppe068aD9reDjV",
   },
   {
     id: 3,
     title: "Dream Potion",
     artist: "tubebackr",
     cover: ImageMusic3,
-    audio: "../public/assets/music/Dream Potion.mp3",
+    audio:
+      "https://drive.google.com/uc?export=download&id=1DhH1DVllCYSknnsVMyy05cUfDsxRq2Of",
   },
 ];
