@@ -158,10 +158,16 @@ const MusicPlayer = () => {
       className="fixed top-20 left-0 right-0 w-full transition-all duration-300 ease-out z-[9999]"
     >
       <audio
+        key={currentTrack.id} // penting biar React re-render audio baru
         ref={audioRef}
         src={currentTrack.audio}
         onTimeUpdate={() => setCurrentProgress(audioRef.current.currentTime)}
-        onLoadedMetadata={() => setCurrentProgress(0)}
+        onLoadedMetadata={() => {
+          setCurrentProgress(0);
+          if (isPlaying) {
+            audioRef.current.play();
+          }
+        }}
       ></audio>
 
       <div className="container mx-auto px-4 py-2">

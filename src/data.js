@@ -170,7 +170,7 @@ export const listMusic = [
     artist: "Moavii",
     cover: ImageMusic1,
     audio:
-      "https://drive.google.com/uc?export=download&id=1NnsAKfafluR4RbNBpXjBCm1DBUkcmE4I",
+      "https://res.cloudinary.com/dzcm7ddky/video/upload/v1755847743/Too_Late_-_Moavii_Chill_Beat_Vlog_New_Release_wkhnsy.mp3",
   },
   {
     id: 2,
@@ -178,7 +178,7 @@ export const listMusic = [
     artist: "Lukrembo",
     cover: ImageMusic2,
     audio:
-      "https://drive.google.com/uc?export=download&id=1ORb6xo5TdHZa77eXkjppe068aD9reDjV",
+      "https://res.cloudinary.com/dzcm7ddky/video/upload/v1755847741/Cloud_emu0qq.mp3", // **Ganti dengan URL Cloudinary untuk lagu 'Cloud'**
   },
   {
     id: 3,
@@ -186,6 +186,6 @@ export const listMusic = [
     artist: "tubebackr",
     cover: ImageMusic3,
     audio:
-      "https://drive.google.com/uc?export=download&id=1DhH1DVllCYSknnsVMyy05cUfDsxRq2Of",
+      "https://res.cloudinary.com/dzcm7ddky/video/upload/v1755847687/Dream_Potion_wxcgip.mp3",
   },
 ];
