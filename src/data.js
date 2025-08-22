@@ -7,6 +7,8 @@
 // - "coming_soon": Project belum selesai, tombol abu-abu dengan text "Coming Soon"
 // }
 
+// data.js
+
 // Import semua gambar
 import HeroImage from "/assets/Foto Formall.jpg";
 import Tools1 from "/assets/tools/vscode.png";
@@ -28,6 +30,10 @@ import Project4 from "/assets/proyek/proyek4.webp";
 import Project5 from "/assets/proyek/proyek5.webp";
 import Project6 from "/assets/proyek/proyek6.webp";
 // Data Image
+import ImageMusic1 from "../public/assets/music/img/TooLate-Moavii.jpeg";
+import ImageMusic2 from "../public/assets/music/img/cloud.jpg";
+import ImageMusic3 from "../public/assets/music/img/dream potion.jpeg";
+
 const DataImage = {
   HeroImage,
 };
@@ -90,7 +96,7 @@ export const listProject = [
       "Lucide React",
     ],
     dad: "200",
-    link: "https://llama-chat-ai.vercel.app/",
+    link: "https://chat-assistant-ai.vercel.app/",
     status: "active",
   },
   {
@@ -152,5 +158,30 @@ export const listProject = [
     dad: "700",
     link: "https://maulaibrahimsyahwi.github.io/Web-Portofolio-TailwindCSS/",
     status: "active",
+  },
+];
+
+// data music
+export const listMusic = [
+  {
+    id: 1,
+    title: "Too Late",
+    artist: "Moavii",
+    cover: ImageMusic1, // URL cover album
+    audio: "../public/assets/music/TooLate-Moavii.mp3", // Pastikan path ini benar
+  },
+  {
+    id: 2,
+    title: "Cloud",
+    artist: "Lukrembo",
+    cover: ImageMusic2,
+    audio: "../public/assets/music/Cloud.mp3",
+  },
+  {
+    id: 3,
+    title: "Dream Potion",
+    artist: "tubebackr",
+    cover: ImageMusic3,
+    audio: "../public/assets/music/Dream Potion.mp3",
   },
 ];
