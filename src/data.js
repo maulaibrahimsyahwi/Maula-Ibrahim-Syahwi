@@ -115,7 +115,7 @@ export const listProject = [
       "kanban board",
     ],
     dad: "300",
-    link: "https://kanban-board-alpha-peach.vercel.app/",
+    link: "https://kanbans-boards.vercel.app/",
     status: "active",
   },
   {
