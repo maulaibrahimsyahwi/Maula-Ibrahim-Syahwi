@@ -145,7 +145,7 @@ export const listProject = [
     desk: `Simple website based on React that displays Pokémon data from local JSON files, requires a "skilvul"/"admin" login, and using CSS.`,
     tools: ["Vite", "ReactJS", "CSS"],
     dad: "500",
-    link: "https://simple-pokemonn.vercel.app/,
+    link: "https://simple-pokemonn.vercel.app/",
     status: "active",
   },
 
