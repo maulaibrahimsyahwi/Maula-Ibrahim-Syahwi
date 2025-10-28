@@ -11,17 +11,17 @@
 
 // Import semua gambar
 import HeroImage from "/assets/Foto Formall.jpg";
-import Tools1 from "/assets/tools/vscode.png";
-import Tools2 from "/assets/tools/reactjs.png";
-import Tools3 from "/assets/tools/nextjs.png";
-import Tools4 from "/assets/tools/tailwind.png";
-import Tools5 from "/assets/tools/bootstrap.png";
-import Tools6 from "/assets/tools/js.png";
-import Tools7 from "/assets/tools/nodejs.png";
-import Tools8 from "/assets/tools/github.png";
-import Tools9 from "/assets/tools/ai.png";
-import Tools10 from "/assets/tools/canva.png";
-import Tools11 from "/assets/tools/figma.png";
+import Tools1 from "/assets/tools/vscode.webp";
+import Tools2 from "/assets/tools/reactjs.webp";
+import Tools3 from "/assets/tools/nextjs.webp";
+import Tools4 from "/assets/tools/tailwind.webp";
+import Tools5 from "/assets/tools/bootstrap.webp";
+import Tools6 from "/assets/tools/js.webp";
+import Tools7 from "/assets/tools/nodejs.webp";
+import Tools8 from "/assets/tools/github.webp";
+import Tools9 from "/assets/tools/ai.webp";
+import Tools10 from "/assets/tools/canva.webp";
+import Tools11 from "/assets/tools/figma.webp";
 // Import semua Project
 import Project1 from "/assets/proyek/proyek1.webp";
 import Project2 from "/assets/proyek/proyek2.webp";
@@ -30,9 +30,9 @@ import Project4 from "/assets/proyek/proyek4.webp";
 import Project5 from "/assets/proyek/proyek5.webp";
 import Project6 from "/assets/proyek/proyek6.webp";
 // Data Image
-import ImageMusic1 from "../public/assets/music/img/TooLate-Moavii.jpeg";
-import ImageMusic2 from "../public/assets/music/img/cloud.jpg";
-import ImageMusic3 from "../public/assets/music/img/dream potion.jpeg";
+import ImageMusic1 from "/assets/music/img/TooLate-Moavii.webp";
+import ImageMusic2 from "/assets/music/img/cloud.webp";
+import ImageMusic3 from "/assets/music/img/dream potion.webp";
 
 const DataImage = {
   HeroImage,
@@ -161,7 +161,6 @@ export const listProject = [
   },
 ];
 
-// data music
 // data music
 export const listMusic = [
   {
