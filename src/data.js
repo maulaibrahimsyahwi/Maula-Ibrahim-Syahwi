@@ -11,28 +11,6 @@
 
 // Import semua gambar
 import HeroImage from "/assets/Foto Formall.jpg";
-import Tools1 from "/assets/tools/vscode.webp";
-import Tools2 from "/assets/tools/reactjs.webp";
-import Tools3 from "/assets/tools/nextjs.webp";
-import Tools4 from "/assets/tools/tailwind.webp";
-import Tools5 from "/assets/tools/bootstrap.webp";
-import Tools6 from "/assets/tools/js.webp";
-import Tools7 from "/assets/tools/nodejs.webp";
-import Tools8 from "/assets/tools/github.webp";
-import Tools9 from "/assets/tools/ai.webp";
-import Tools10 from "/assets/tools/canva.webp";
-import Tools11 from "/assets/tools/figma.webp";
-// Import semua Project
-import Project1 from "/assets/proyek/proyek1.webp";
-import Project2 from "/assets/proyek/proyek2.webp";
-import Project3 from "/assets/proyek/proyek3.webp";
-import Project4 from "/assets/proyek/proyek4.webp";
-import Project5 from "/assets/proyek/proyek5.webp";
-import Project6 from "/assets/proyek/proyek6.webp";
-// Data Image
-import ImageMusic1 from "/assets/music/img/TooLate-Moavii.webp";
-import ImageMusic2 from "/assets/music/img/cloud.webp";
-import ImageMusic3 from "/assets/music/img/dream potion.webp";
 
 const DataImage = {
   HeroImage,
@@ -43,48 +21,102 @@ export default DataImage;
 export const listTools = [
   {
     id: 1,
-    gambar: Tools1,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628532/vscode_gxstv8.webp",
     nama: "Visual Studio Code",
     ket: "Code Editor",
     dad: "100",
   },
-  { id: 2, gambar: Tools2, nama: "React JS", ket: "Framework", dad: "200" },
-  { id: 3, gambar: Tools3, nama: "Next JS", ket: "Framework", dad: "300" },
+  {
+    id: 2,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628548/reactjs_usrdvh.webp",
+    nama: "React JS",
+    ket: "Framework",
+    dad: "200",
+  },
+  {
+    id: 3,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628570/nextjs_udnaj1.webp",
+    nama: "Next JS",
+    ket: "Framework",
+    dad: "300",
+  },
   {
     id: 4,
-    gambar: Tools4,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628539/tailwind_ba4lov.webp",
     nama: "Tailwind CSS",
     ket: "Framework",
     dad: "400",
   },
-  { id: 5, gambar: Tools5, nama: "Bootstrap", ket: "Framework", dad: "500" },
-  { id: 6, gambar: Tools6, nama: "Javascript", ket: "Language", dad: "600" },
+  {
+    id: 5,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628516/bootstrap_iozzsp.webp",
+    nama: "Bootstrap",
+    ket: "Framework",
+    dad: "500",
+  },
+  {
+    id: 6,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628577/js_hn5xbz.webp",
+    nama: "Javascript",
+    ket: "Language",
+    dad: "600",
+  },
   {
     id: 7,
-    gambar: Tools7,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628555/nodejs_ffsg78.webp",
     nama: "Node JS",
     ket: "Javascript Runtime",
     dad: "700",
   },
-  { id: 8, gambar: Tools8, nama: "Github", ket: "Repository", dad: "800" },
+  {
+    id: 8,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628586/github_ahclzd.webp",
+    nama: "Github",
+    ket: "Repository",
+    dad: "800",
+  },
   {
     id: 9,
-    gambar: Tools9,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628525/ai_jrmge3.webp",
     nama: "Adobe Illustrator",
     ket: "Design App",
     dad: "900",
   },
-  { id: 10, gambar: Tools10, nama: "Canva", ket: "Design App", dad: "1000" },
-  { id: 11, gambar: Tools11, nama: "Figma", ket: "Design App", dad: "1100" },
+  {
+    id: 10,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628592/canva_enkee7.webp",
+    nama: "Canva",
+    ket: "Design App",
+    dad: "1000",
+  },
+  {
+    id: 11,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628598/figma_ufyg6t.webp",
+    nama: "Figma",
+    ket: "Design App",
+    dad: "1100",
+  },
 ];
 
 // Data Proyek
 export const listProject = [
   {
     id: 1,
-    gambar: Project1,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761729537/proyek1_bny7yy.webp",
     nama: "AI Chat Interface",
-    desk: "Modern AI Chat Application Based on React & Tailwind, Integrated GroQ AI (Llama 4). Features: Chat Real-Time, Conversation History, Context Memory, Responsive Design, and Modern UI/UX.",
+    desk: "Modern AI Chat Application Based on React & Tailwind, Integrated with LLM model. Features: Chat Real-Time, Conversation History, Context Memory, Responsive Design, and Modern UI/UX.",
     tools: [
       "Javascript",
       "Tailwind",
@@ -101,7 +133,8 @@ export const listProject = [
   },
   {
     id: 2,
-    gambar: Project2,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761376274/proyek2_qg6lbk.webp",
     nama: "Kanban Board | Project Management Tool",
     desk: "Manage projects and tasks with Kanban Board. It's a modern, responsive Kanban board, built with Next.js, Tailwind CSS, and drag-and-drop features.",
     tools: [
@@ -120,7 +153,8 @@ export const listProject = [
   },
   {
     id: 3,
-    gambar: Project3,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761376274/proyek3_pknlsn.webp",
     nama: "Prototype UI/UX",
     desk: "Canteen UNJ Prototype for Mobile Dwaves for the UNJ Canteen Application to order food via a cellphone with a simple appearance.",
     tools: ["Figma", "Canva"],
@@ -130,7 +164,8 @@ export const listProject = [
   },
   {
     id: 5,
-    gambar: Project5,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761731340/proyek5_hmf2ym.webp",
     nama: "Responsive Movie Database",
     desk: "The film database application was built with react using API. Find movies, make a list of watches, and film ranking.",
     tools: ["HTML", "TailwindCSS", "Javascript", "React", "API", "Vite"],
@@ -140,9 +175,10 @@ export const listProject = [
   },
   {
     id: 4,
-    gambar: Project4,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761730964/proyek4_tss66y.webp",
     nama: "Simple Pokémon Website",
-    desk: `Simple website based on React that displays Pokémon data from local JSON files, requires a "skilvul"/"admin" login, and using CSS.`,
+    desk: `Simple website based on React that displays Pokémon data from local JSON files, requires a "Admin"/"admin" login, and using CSS.`,
     tools: ["Vite", "ReactJS", "CSS"],
     dad: "500",
     link: "https://simple-pokemonn.vercel.app/",
@@ -151,7 +187,8 @@ export const listProject = [
 
   {
     id: 6,
-    gambar: Project6,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761376274/proyek6_dvpnag.webp",
     nama: "Simple Portfolio",
     desk: "This portfolio website is made purely using Tailwind CSS, displays profiles, projects, and contacts with responsive design and modern styles without additional framework.",
     tools: ["HTML", "CSS", "Javascript", "Tailwind"],
@@ -167,7 +204,8 @@ export const listMusic = [
     id: 1,
     title: "Too Late",
     artist: "Moavii",
-    cover: ImageMusic1,
+    cover:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628638/TooLate-Moavii_cvqnqd.webp",
     audio:
       "https://res.cloudinary.com/dzcm7ddky/video/upload/v1755847743/Too_Late_-_Moavii_Chill_Beat_Vlog_New_Release_wkhnsy.mp3",
   },
@@ -175,7 +213,8 @@ export const listMusic = [
     id: 2,
     title: "Cloud",
     artist: "Lukrembo",
-    cover: ImageMusic2,
+    cover:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628619/cloud_qarijn.webp",
     audio:
       "https://res.cloudinary.com/dzcm7ddky/video/upload/v1755847741/Cloud_emu0qq.mp3", // **Ganti dengan URL Cloudinary untuk lagu 'Cloud'**
   },
@@ -183,7 +222,8 @@ export const listMusic = [
     id: 3,
     title: "Dream Potion",
     artist: "tubebackr",
-    cover: ImageMusic3,
+    cover:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628632/dream_potion_kp6nje.webp",
     audio:
       "https://res.cloudinary.com/dzcm7ddky/video/upload/v1755847687/Dream_Potion_wxcgip.mp3",
   },
