@@ -1,15 +1,3 @@
-// {
-//   // Status yang tersedia:
-// - "active": Link berfungsi normal, akan muncul tombol "Lihat" berwarna violet
-// - "expired": Link sudah kadaluarsa, tombol merah dengan text "Link Expired"
-// - "maintenance": Sedang maintenance, tombol kuning dengan text "Under Maintenance"
-// - "inactive": Project tidak aktif, tombol abu-abu dengan text "Not Available"
-// - "coming_soon": Project belum selesai, tombol abu-abu dengan text "Coming Soon"
-// }
-
-// data.js
-
-// Import semua gambar
 import HeroImage from "/assets/Foto Formall.jpg";
 
 const DataImage = {
@@ -17,7 +5,6 @@ const DataImage = {
 };
 export default DataImage;
 
-// Data Tools
 export const listTools = [
   {
     id: 1,
@@ -109,12 +96,13 @@ export const listTools = [
   },
 ];
 
-// Data Proyek
 export const listProject = [
   {
     id: 1,
     gambar:
       "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761729537/proyek1_bny7yy.webp",
+    preview:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1766458688/ai_anfogw.webp",
     nama: "AI Chat Interface",
     desk: "Modern AI Chat Application Based on React & Tailwind, Integrated with LLM model. Features: Chat Real-Time, Conversation History, Context Memory, Responsive Design, and Modern UI/UX.",
     tools: [
@@ -135,6 +123,8 @@ export const listProject = [
     id: 2,
     gambar:
       "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761376274/proyek2_qg6lbk.webp",
+    preview:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1766459933/kanban_board_fe9koa.webp",
     nama: "Kanban Board | Project Management Tool",
     desk: "Manage projects and tasks with Kanban Board. It's a modern, responsive Kanban board, built with Next.js, Tailwind CSS, and drag-and-drop features.",
     tools: [
@@ -155,6 +145,8 @@ export const listProject = [
     id: 3,
     gambar:
       "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761376274/proyek3_pknlsn.webp",
+    preview:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761376274/proyek3_pknlsn.webp",
     nama: "Prototype UI/UX",
     desk: "Canteen UNJ Prototype for Mobile Dwaves for the UNJ Canteen Application to order food via a cellphone with a simple appearance.",
     tools: ["Figma", "Canva"],
@@ -163,8 +155,23 @@ export const listProject = [
     status: "active",
   },
   {
+    id: 4,
+    gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761730964/proyek4_tss66y.webp",
+    preview:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1766458689/pokemon_npazem.webp",
+    nama: "Simple Pokémon Website",
+    desk: `Simple website based on React that displays Pokémon data from local JSON files, requires a "Admin"/"admin" login, and using CSS.`,
+    tools: ["Vite", "ReactJS", "CSS"],
+    dad: "500",
+    link: "https://simple-pokemonn.vercel.app/",
+    status: "active",
+  },
+  {
     id: 5,
     gambar:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761731340/proyek5_hmf2ym.webp",
+    preview:
       "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761731340/proyek5_hmf2ym.webp",
     nama: "Responsive Movie Database",
     desk: "The film database application was built with react using API. Find movies, make a list of watches, and film ranking.",
@@ -174,21 +181,11 @@ export const listProject = [
     status: "active",
   },
   {
-    id: 4,
-    gambar:
-      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761730964/proyek4_tss66y.webp",
-    nama: "Simple Pokémon Website",
-    desk: `Simple website based on React that displays Pokémon data from local JSON files, requires a "Admin"/"admin" login, and using CSS.`,
-    tools: ["Vite", "ReactJS", "CSS"],
-    dad: "500",
-    link: "https://simple-pokemonn.vercel.app/",
-    status: "active",
-  },
-
-  {
     id: 6,
     gambar:
       "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761376274/proyek6_dvpnag.webp",
+    preview:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1766458690/portofolio_simple_jdupk6.webp",
     nama: "Simple Portfolio",
     desk: "This portfolio website is made purely using Tailwind CSS, displays profiles, projects, and contacts with responsive design and modern styles without additional framework.",
     tools: ["HTML", "CSS", "Javascript", "Tailwind"],
@@ -198,7 +195,6 @@ export const listProject = [
   },
 ];
 
-// data music
 export const listMusic = [
   {
     id: 1,
@@ -216,7 +212,7 @@ export const listMusic = [
     cover:
       "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628619/cloud_qarijn.webp",
     audio:
-      "https://res.cloudinary.com/dzcm7ddky/video/upload/v1755847741/Cloud_emu0qq.mp3", // **Ganti dengan URL Cloudinary untuk lagu 'Cloud'**
+      "https://res.cloudinary.com/dzcm7ddky/video/upload/v1755847741/Cloud_emu0qq.mp3",
   },
   {
     id: 3,
@@ -226,5 +222,21 @@ export const listMusic = [
       "https://res.cloudinary.com/dzcm7ddky/image/upload/v1761628632/dream_potion_kp6nje.webp",
     audio:
       "https://res.cloudinary.com/dzcm7ddky/video/upload/v1755847687/Dream_Potion_wxcgip.mp3",
+  },
+];
+
+export const listPublication = [
+  {
+    id: 1,
+    title:
+      "MENGEMBANGKAN KEMAMPUAN KREATIF DAN KETERAMPILAN DIGITAL REMAJA AWAL MELALUI PEMBELAJARAN UI/UX DESIGN",
+    journal: "Jurnal Pembelajaran, Kurikulum dan Teknologi Pendidikan",
+    year: "2025",
+    desc: "Penelitian ini bertujuan untuk mengeksplorasi bagaimana pemahaman konsep desain antarmuka pengguna (UI) dan pengalaman pengguna (UX) dapat berkontribusi dalam mengembangkan kreativitas dan keterampilan digital remaja awal usia 13 hingga 15 tahun.",
+    link: "https://artmediapub.id/index.php/JPKTP/article/view/111",
+    image:
+      "https://res.cloudinary.com/dzcm7ddky/image/upload/v1766457795/publication_ugxg9u.webp",
+    tags: ["UI/UX Design", "Literasi Digital", "Kreativitas", "Pendidikan"],
+    dad: "200",
   },
 ];

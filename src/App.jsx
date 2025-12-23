@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import DataImage from "./data";
 import Contact from "./pages/Contact";
 import Dock from "./components/Dock/Dock";
-import { listTools, listProject } from "./data";
+import { listTools, listProject, listPublication } from "./data";
 import { GoHomeFill } from "react-icons/go";
 import { BsFolderFill } from "react-icons/bs";
 import { MdAccountCircle } from "react-icons/md";
@@ -13,27 +13,38 @@ function App() {
   const [showDock, setShowDock] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
+  // State Tunggal untuk Preview Content (Bisa Project atau Publication)
+  const [previewContent, setPreviewContent] = useState(null);
+  const previewRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => {
-      // Assumsi tinggi navbar sekitar 70-80px, sesuaikan dengan tinggi navbar Anda
       const navbarHeight = 80;
       const scrolled = window.scrollY > navbarHeight;
       setShowDock(scrolled);
     };
 
     const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 768); // md breakpoint = 768px
+      setIsDesktop(window.innerWidth >= 768);
     };
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
 
-    // Cleanup event listeners
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  // Handler Mouse Movement (Ringan & Cepat)
+  const handleMouseMove = (e) => {
+    if (previewRef.current) {
+      const x = e.clientX + 20;
+      const y = e.clientY + 20;
+      previewRef.current.style.transform = `translate(${x}px, ${y}px)`;
+    }
+  };
 
   const items = [
     {
@@ -78,7 +89,6 @@ function App() {
     },
   ];
 
-  // Helper function untuk mendapatkan konfigurasi button berdasarkan status project
   const getButtonConfig = (project) => {
     switch (project.status) {
       case "active":
@@ -130,6 +140,45 @@ function App() {
 
   return (
     <>
+      {/* GLOBAL FLOATING PREVIEW ELEMENT */}
+      {previewContent && (
+        <div
+          ref={previewRef}
+          className="fixed top-0 left-0 z-[9999] pointer-events-none transition-opacity duration-300 ease-out animate-in fade-in zoom-in-95"
+          style={{ willChange: "transform" }}
+        >
+          <div className="bg-zinc-900 p-2 rounded-xl border border-zinc-700 shadow-[0_0_30px_rgba(0,0,0,0.5)] w-80">
+            <div className="relative aspect-video rounded-lg overflow-hidden bg-zinc-800">
+              {previewContent.image ? (
+                <img
+                  src={previewContent.image}
+                  alt="Preview"
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="flex items-center justify-center w-full h-full text-zinc-500 text-sm flex-col gap-2">
+                  <i className="ri-image-line text-2xl"></i>
+                  <span>No preview available</span>
+                </div>
+              )}
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/60 to-transparent"></div>
+
+              {/* Badge Tipe Konten */}
+              <div className="absolute top-2 right-2 px-2 py-1 bg-black/50 backdrop-blur-md rounded-md text-[10px] uppercase font-bold text-white border border-white/10">
+                {previewContent.type}
+              </div>
+            </div>
+
+            <div className="mt-3 px-1 mb-1">
+              <p className="text-sm font-bold text-white truncate">
+                {previewContent.title}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
         <div className="animate__animated animate__fadeInUp animate__delay-0.5s ">
@@ -175,7 +224,6 @@ function App() {
         />
       </div>
 
-      {/* Dock - Only show when navbar is not visible AND on md and up */}
       {showDock && isDesktop && (
         <Dock
           items={items}
@@ -188,7 +236,6 @@ function App() {
 
       {/* About Section */}
       <div className="about mt-32 py-10 " id="about">
-        {/* about me */}
         <div
           className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg"
           data-aos="fade-up"
@@ -278,7 +325,7 @@ function App() {
         </div>
       </div>
 
-      {/* project */}
+      {/* Project Section */}
       <div className="project mt-32 py-10" id="project">
         <h1
           className="text-center text-4xl font-bold mb-2"
@@ -311,7 +358,6 @@ function App() {
                 data-aos-delay={project.dad}
                 data-aos-once="true"
               >
-                {/* Fixed image section */}
                 <div className="w-full aspect-video bg-zinc-700 rounded-md mb-4 overflow-hidden flex-shrink-0">
                   <img
                     src={project.gambar}
@@ -321,18 +367,15 @@ function App() {
                   />
                 </div>
 
-                {/* Content section yang akan mengambil sisa ruang */}
                 <div className="project-card-info flex flex-col flex-grow">
                   <h1 className="font-bold text-2xl my-4 flex-shrink-0">
                     {project.nama}
                   </h1>
 
-                  {/* Description dengan flex-grow untuk mengambil sisa ruang */}
                   <p className="opacity-50 text-base/loose mb-4 ">
                     {project.desk}
                   </p>
 
-                  {/* Tools section yang akan selalu sejajar di bawah */}
                   <div className="flex flex-wrap gap-2 mb-4 flex-shrink-0 mt-auto">
                     {project.tools.map((tool, index) => (
                       <p
@@ -344,7 +387,6 @@ function App() {
                     ))}
                   </div>
 
-                  {/* Button section yang akan selalu di bawah */}
                   <div className="text-center flex-shrink-0">
                     <div className="relative group">
                       {buttonConfig.clickable ? (
@@ -352,6 +394,16 @@ function App() {
                           href={buttonConfig.href}
                           target={buttonConfig.target}
                           rel="noopener noreferrer"
+                          // LOGIC PREVIEW PROJECT DITAMBAHKAN DI SINI
+                          onMouseEnter={() =>
+                            setPreviewContent({
+                              image: project.preview,
+                              title: project.nama,
+                              type: "Project",
+                            })
+                          }
+                          onMouseLeave={() => setPreviewContent(null)}
+                          onMouseMove={handleMouseMove}
                           className={`p-3 rounded-lg block border border-zinc-600 ${buttonConfig.className}`}
                         >
                           {buttonConfig.text}
@@ -364,7 +416,7 @@ function App() {
                         </span>
                       )}
 
-                      {/* Tooltip untuk status non-active */}
+                      {/* Tooltip bawaan (jika status maintenance/expired) */}
                       {buttonConfig.tooltip && (
                         <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
                           {buttonConfig.tooltip}
@@ -377,6 +429,99 @@ function App() {
               </div>
             );
           })}
+        </div>
+      </div>
+
+      {/* Publications Section */}
+      <div className="publication mt-32 py-10" id="publication">
+        <h1
+          className="text-center text-4xl font-bold mb-2"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+          data-aos-once="true"
+        >
+          Publications
+        </h1>
+        <p
+          className="text-base/loose text-center opacity-50"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+          data-aos-once="true"
+        >
+          Academic research and articles I have published
+        </p>
+
+        <div className="publication-box mt-14 max-w-4xl mx-auto px-4">
+          {listPublication.map((pub) => (
+            <div
+              key={pub.id}
+              className="group relative bg-zinc-800/40 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-6 sm:p-8 hover:-translate-y-1"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay={pub.dad}
+              data-aos-once="true"
+            >
+              <div className="flex flex-col md:flex-row gap-6">
+                <div className="flex-grow">
+                  <div className="flex flex-wrap items-center gap-3 mb-3 text-sm">
+                    <span className="px-3 py-1 bg-violet-500/10 text-violet-400 border border-violet-500/20 rounded-full font-medium flex items-center gap-1">
+                      <i className="ri-article-line"></i> Research Article
+                    </span>
+                    <span className="text-zinc-500 flex items-center gap-1">
+                      {pub.year}
+                    </span>
+                  </div>
+
+                  <h2 className="text-2xl font-bold mb-3 text-white group-hover:text-violet-200 transition-colors">
+                    {pub.title}
+                  </h2>
+
+                  <div className="mb-4 text-violet-400 font-medium flex items-center gap-2">
+                    <i className="ri-book-mark-line"></i> {pub.journal}
+                  </div>
+
+                  <p className="text-zinc-400 leading-relaxed mb-6 border-l-2 border-zinc-700 pl-4">
+                    {pub.desc}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {pub.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="text-xs px-3 py-1.5 bg-zinc-700/30 text-zinc-400 rounded-lg border border-zinc-700 group-hover:border-zinc-600 transition-colors"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="md:w-auto flex md:flex-col justify-end md:justify-start items-start">
+                  <a
+                    href={pub.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    onMouseEnter={() =>
+                      setPreviewContent({
+                        image: pub.image,
+                        title: pub.title,
+                        info: pub.journal,
+                        type: "Publication",
+                      })
+                    }
+                    onMouseLeave={() => setPreviewContent(null)}
+                    onMouseMove={handleMouseMove}
+                    className="flex items-center gap-2 px-6 py-3 bg-zinc-700 hover:bg-violet-600 text-white rounded-xl transition-all duration-300 font-medium group/btn w-full md:w-auto justify-center"
+                  >
+                    Read
+                    <i className="ri-arrow-right-up-line group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
