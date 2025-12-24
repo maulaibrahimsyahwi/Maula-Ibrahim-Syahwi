@@ -8,6 +8,7 @@ import { BsFolderFill } from "react-icons/bs";
 import { MdAccountCircle } from "react-icons/md";
 import { VscSettingsGear } from "react-icons/vsc";
 import { BiSolidMessageSquareDetail } from "react-icons/bi";
+import { GrArticle } from "react-icons/gr";
 
 function App() {
   const [showDock, setShowDock] = useState(false);
@@ -76,6 +77,14 @@ function App() {
       label: "tools",
       onClick: () => {
         const element = document.getElementById("tools");
+        element?.scrollIntoView({ behavior: "smooth" });
+      },
+    },
+    {
+      icon: <GrArticle size={24} />,
+      label: "publication",
+      onClick: () => {
+        const element = document.getElementById("publication");
         element?.scrollIntoView({ behavior: "smooth" });
       },
     },
@@ -230,7 +239,7 @@ function App() {
           panelHeight={68}
           baseItemSize={50}
           magnification={70}
-          className="fixed bottom-0 z-[9999] border border-none transition-all duration-300 ease-in-out bg-zinc-800/30 backdrop-blur-md"
+          className="fixed bottom-0 z-[9999] border border-none transition-all duration-300 ease-in-out bg-zinc-800/30 backdrop-blur-md cursor-pointer"
         />
       )}
 
