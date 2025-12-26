@@ -4,3 +4,44 @@
     font-family: "Poppins", sans-serif;
   }
 }
+
+/* CUSTOM LOADER DARI USER */
+.loader {
+  width: 300px;
+  height: 30px;
+  position: relative;
+
+  /* Flexbox untuk menaruh teks di tengah */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Pastikan background container hitam (agar teks hitam tersembunyi) */
+  background-color: #000;
+  overflow: hidden; /* Rapikan sudut jika ada border-radius */
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+
+  /* UBAH DI SINI: Gunakan background solid putih agar teks terlihat saat bar lewat */
+  background: #fff;
+  /* box-shadow tidak diperlukan lagi jika sudah solid */
+
+  animation: l3 1s infinite alternate;
+  z-index: 0; /* Bar di bawah teks */
+}
+
+@keyframes l3 {
+  0% {
+    inset: 0 50% 0 0;
+  }
+  50% {
+    inset: 0 0 0 0;
+  }
+  100% {
+    inset: 0 0 0 50%;
+  }
+}
