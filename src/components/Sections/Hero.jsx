@@ -17,7 +17,7 @@ const Hero = () => {
         </p>
         <div className="flex items-center sm:gap-4 gap-2">
           <a
-            href="https://www.canva.com/design/DAGKzOJJ7V0/7Ti46Om54SuLRde9891UEA/view?utm_content=DAGKzOJJ7V0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1717526705"
+            href="https://www.canva.com/design/DAG9RKmku7w/LTaCkE7hCXUKstcljiK9bA/view?utm_content=DAG9RKmku7w&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf95d695f9d"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600 transition-colors duration-200"
